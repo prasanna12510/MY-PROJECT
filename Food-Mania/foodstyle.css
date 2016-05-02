@@ -1,0 +1,124 @@
+#menu
+{
+    /*You can decorate the menu's container, such as adding background images through this block*/
+    background-color: #222;
+    height: 38px;
+    padding: 15px;
+    border-radius: 3px;
+}
+
+#footer
+{
+    background-color: #222;
+    height: 38px;
+    padding: 15px;
+    border-radius: 3px;
+    font: normal 14px arial;
+    
+    text-align: center;
+    color: #fff;
+    padding-top:20px;
+    padding-bottom: 0px;
+    margin:0;
+    border-bottom:1px solid #6C0000;
+    z-index: 1;
+}
+#innermenu
+{
+    margin:0 auto;/*This will make the menu center-aligned. Removing this line will make the menu align left.*/
+}
+#innermenu ul 
+{ 
+    position: relative;
+    list-style-type: none;
+    float:left;
+    padding:0;margin:0;
+    border-bottom:solid 1px #6C0000;
+}
+#innermenu li
+{
+    float:left;
+    list-style-type: none;
+    padding:0;margin:0;background-image:none;
+}
+/*CSS for background bubble*/
+#innermenu li.highlight
+{
+    background-color:#800;
+    top:36px;
+    height:2px;
+    border-bottom:solid 1px #C00;
+    z-index: 1;
+    position: absolute;
+    overflow:hidden;
+}
+#innermenu li a
+{
+    height:30px;
+    padding-top: 8px;
+    margin: 0 20px;/*used to adjust the distance between each menu item. Now the distance is 20+20=40px.*/
+    color: #fff;
+    font: normal 14px arial;
+    text-align: center;
+    text-decoration: none;
+    float: left;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+a:link, a:active, a:visited
+{
+ text-decoration: none ;    
+}
+
+h1,h2,h3,h4,h5,h6
+{
+    color: #000000;
+}
+
+.layouttable
+{
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    border:0px;
+    border-spacing: 0px;
+    height:100px;
+    width: 900px;
+    margin: auto;
+    
+}
+
+.contenttable
+{
+    display: block;
+    width:99%;
+    height: 520px;
+    margin:0px; 
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-spacing: 0px;
+    /*border-left: 6px #AAAAAA groove;
+    border-right: 6px #AAAAAA ridge;*/
+}
+
+fieldset
+{
+    padding: 10px;
+}
+
+.contenttable td
+{
+    width: 33%;
+    text-align: justify;
+}
+
+.contentdiv
+{
+    overflow: auto; 
+    height: 520px;
+    
+}

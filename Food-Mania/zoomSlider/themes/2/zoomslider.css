@@ -1,0 +1,86 @@
+/* http://www.menucool.com */
+
+#wrapper {position:relative;width:960px;margin:0 auto;}
+
+#zoom-slider {
+    width:840px;height:420px;/* Make it smaller than your images for zooming effect */
+    border:10px solid black;
+	background:#CCC url(loading.gif) no-repeat 50% 50%;
+    overflow:hidden;
+	position:relative;
+	margin:0 auto;/*make the image slider center-aligned */
+    box-shadow: 0px 1px 5px #222222;
+    border-radius:6px;
+}
+
+#zoom-slider img {
+	position:absolute;
+	display:none;
+	top:0px;
+	z-index:1;
+	-ms-interpolation-mode: bicubic;
+	image-rendering: optimizeQuality;
+}
+
+/* Caption styles */
+div.zs-caption-bg, div.zs-caption-bg2 {
+	position:absolute;
+	left:229px;/*if the caption needs to be aligned from right, specify by right instead of left. i.e. right:20px;*/
+	bottom:20px;/*if the caption needs to be aligned from top, specify by top instead of bottom. i.e. top:350px;*/
+	width:460px;
+	height:auto;
+	padding:16px;
+	z-index:6;
+	overflow:hidden;
+	font-size:0;
+}
+div.zs-caption-bg {
+	background:#000;/*Caption background color. Can be defined as semi-transparent through the javascript slideshowOptions setting.*/
+	border-radius: 5px;
+	border:1px solid #CCCCCC;
+}
+div.zs-caption {
+	font:bold 17px/19px Verdana, Arial;
+	color:White;
+	z-index:7;
+	text-align:center;/* When captionEffect was set to rotate through javascript, and setting "text-align:left" will create a fly-in effect, and setting "text-align:center" will get the rotate effect. */
+	overflow:hidden;
+}
+div.zs-caption a {
+	color:#09F;
+}
+
+
+/* navigation bullets wrapper */
+div.navBulletsWrapper  {
+	top:30px;
+	left:420px;
+	background:none;
+	padding-left:20px;
+	position:relative;
+	z-index:8;
+	cursor:pointer;
+}
+
+/* each bullet */
+div.navBulletsWrapper div 
+{
+    width:12px; height:12px;
+    background:transparent url(bullets.png) no-repeat 0 0;
+    float:left;overflow:hidden;vertical-align:middle;cursor:pointer;
+    margin-right:11px;/* distance between each bullet*/
+    _position:relative;/*IE6 hack*/
+}
+
+div.navBulletsWrapper div.active {background-position:0 -12px;}
+
+
+/* --------- Others ------- */
+#zoom-slider img
+{
+	transform: translate3d(0,0,0);
+    -ms-transform:translate3d(0,0,0);
+    -moz-transform:translate3d(0,0,0);
+    -o-transform:translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}

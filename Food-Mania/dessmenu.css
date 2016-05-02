@@ -1,0 +1,37 @@
+/* CSSTerm.com Simple CSS menu */ 
+.menu_simple ul {
+	margin: 0;
+	padding: 0;
+	width:185px;
+	list-style-type: none;
+}
+ 
+.menu_simple ul li a {
+	text-decoration: none;
+	color: white;
+	padding: 10.5px 11px;
+	background-color: #005555;
+	display:block;
+}
+ 
+.menu_simple ul li a:visited {
+	color: white;
+}
+ 
+.menu_simple ul li a:hover, .menu_simple ul li.current {
+	color: white;
+	background-color: #5FD367;
+}
+
+.lefttable
+{
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    border:0px;
+    border-spacing: 0px;
+    height:500px;
+    width: 200px;
+    margin:00px;
+    
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <title>HEAVENLY FOOD ON EARTH</title> 
+ <link rel="stylesheet" href="foodstyle.css"/>
+	 <script src="menu.js"></script>
+    <script src="zoomSlider.js" type="text/javascript"></script>
+    <link href="themes/1/zoomslider.css" rel="stylesheet" type="text/css" />
+    </head>
+<body background = "i1.jpg">
+<table class="layouttable">
+    <tr>
+        <td>
+            <div id="menu">
+    <div id ="innermenu">
+        <ul>
+            <li> <a href = HomeLogin.html>Home</a> </li>
+            <li> <a href = "Maincourses.html" target="_blank">Main Courses</a> </li>
+            <li> <a href = "beverage1.html" target="_blank">Beverages</a> </li>
+            <li> <a href = "creamyvanilla.html" target="_blank">Desserts</a> </li>
+            <li> <a href = "LogOut.html" target="_blank">Log Out</a> </li>
+            <li> <a href = "AboutUs.html" target="_blank">About Us</a> </li>            
+        </ul>
+    </div>
+</div>
+        </td>
+    </tr>
+ </table>
+<table class = "layouttable">
+<div>
+<tr>
+    <td>	
+    <div id="wrapper">
+        <div id="zoom-slider">
+            <img src="images/js-slideshow-0.jpg" alt="The Most Popular Food WebSite" />
+            <img src="images/js-slideshow-1.jpg" alt="#htmlcaption1" />
+                <img src="images/js-slideshow-2.jpg" alt="Breathe Life into Your Food" /></a>
+            <img src="images/js-slideshow-3.jpg" alt="#htmlcaption2" />
+        </div>
+
+        <div style="width:840px;background:black;padding: 4px 8px 8px 12px; border-radius:0 0 6px 6px; text-align:right;">
+            <div style="float:left;">
+                <a onclick="zoomSlider.previous()" class="navPrev"></a>
+                <a id='auto' onclick="switchAutoAdvance()"></a>
+                <a onclick="zoomSlider.next()" class="navNext"></a>
+            </div>
+            <span id="thumbs">
+                <span><img src="images/thumb-0.jpg" /></span>
+                <span><img src="images/thumb-1.jpg" /></span>
+                <span><img src="images/thumb-2.jpg" /></span>
+                <span><img src="images/thumb-3.jpg" /></span>
+            </span>
+        </div>
+        <!--The following are HTML captions-->
+        <div id="htmlcaption1" style="display: none;">
+            <span style="color:#09F;font-size:20px;">Delicious Food.</span>
+        </div> 
+        <div id="htmlcaption2" style="display: none;">
+            <strong style="color:#C90;">Recipies</strong> which will make you mad
+        </div> 
+    </div>
+    <br />
+    <br />
+    <br />
+
+    <script type="text/javascript">
+        //The following script is for custom navigation buttons.
+        function switchAutoAdvance() {
+            zoomSlider.switchAuto();
+            switchPlayPauseClass();
+        }
+        function switchPlayPauseClass() {
+            var auto = document.getElementById('auto');
+            if (auto) {
+                var isAutoPlay = zoomSlider.getAuto();
+                auto.className = isAutoPlay ? "navPause" : "navPlay";
+                auto.title = isAutoPlay ? "Pause" : "Play";
+            }
+        }
+        switchPlayPauseClass();
+
+
+        //Change the captionEffect. It is recommended to set { captionEffect: "fade" } directly through the zoomSliderOptions in the javascript file instead of using the approach below
+        zoomSlider.changeOptions({ captionEffect: "fade" });
+
+    </script>
+   </td>
+<tr>
+</table> 
+    </body>
+</html>

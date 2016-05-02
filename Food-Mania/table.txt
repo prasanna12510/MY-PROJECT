@@ -1,0 +1,8 @@
+table signup:-
+fname
+lname
+email
+contactno
+city
+country
+pass

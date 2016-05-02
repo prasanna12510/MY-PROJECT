@@ -1,0 +1,120 @@
+<h2>Sign Up</h2>
+<head>
+<link rel="stylesheet" href="loginstyle.css">
+</head>
+
+<BODY background = "images/coffeesplash2.jpg">
+<?php include 'registeruser.php'; ?>
+
+<form name = "form1" action="registeruser.php" onsubmit="return(ValidateForm(this))"  method="post";>
+
+<script type="text/javascript">
+function ValidateForm(frm) 
+{
+	if (frm.fname.value == "") 
+	{
+		alert('First Name is required.');
+		frm.fname.focus();
+		return false;
+	}
+	if (frm.lname.value == "") 
+	{
+		alert('Last Name is required.');
+		frm.lname.focus();
+		return false;
+	}
+
+	if (frm.email.value == "") 
+	{
+		alert('Email address is required.');
+		frm.email.focus();
+		return false;
+	}
+
+	if (frm.email.value.indexOf("@") < 1 || frm.email.value.indexOf(".") < 1) 
+	{
+		alert('Please enter a valid email address.');
+		frm.email.focus();
+		return false;
+	}
+	if (frm.contactno.value.length == "" ) 
+	{
+		alert('Contact no. is required.');
+		frm.contactno.focus();
+		return false;
+	}
+	if (frm.contactno.value.length!=10 ) 
+	{
+		alert('Contact no. must be 10 digits');
+		frm.contactno.focus();
+		return false;
+	}
+
+	if (frm.city.value == "") 
+	{
+		alert('City is required.');
+		frm.city.focus();
+		return false;
+	}
+
+	if (frm.country.value == "") 
+	{
+		alert('Country is required.');
+		frm.country.focus();
+		return false;
+	}
+
+	if (frm.pass.value == "") 
+	{
+		alert('PassWord is required.');
+		frm.pass.focus();
+		return false;
+	}
+	
+	return true; 
+}
+</script>
+
+<table border="0" cellpadding="5" cellspacing="0" width="600">
+<tr>
+<td><b>First, Last Name*:</b></td>
+<td>
+<input id="fname" name="fname" type="text" maxlength="60" style="width:146px; border:1px solid #999999" />
+<input id="lname" name="lname" type="text" maxlength="60" style="width:146px; border:1px solid #999999" />
+</td>
+</tr>
+
+<tr>
+<td><b>Email address*:</b></td>
+<td><input id="email" name="email" type="text" maxlength="60" style="width:300px; border:1px solid #999999" /></td>
+</tr>
+
+<tr>
+<td><b>Contact No: *:</b></td>
+<td><input id="contactno" name="contactno" type="text" maxlength="120" style="width:350px; border:1px solid #999999" /></td>
+</tr>
+
+<tr>
+<td><b>City*:</b></td>
+<td><input id="city" name="city" type="text" maxlength="120" style="width:300px; border:1px solid #999999" /></td>
+</tr>
+
+<tr>
+<td><b>Country*:</b></td>
+<td><input id="country" name="country" type="text" maxlength="120" style="width:300px; border:1px solid #999999" /></td>
+
+<tr>
+<td><b>PassWord*:</b></td>
+<td><input id="pass" name="pass" type="text" maxlength="120" style="width:300px; border:1px solid #999999" /></td>
+</tr>
+
+<td>
+<td>
+* - required fields. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<input id="submit" name="submit" type="submit" value="Submit" />
+</td>
+</td>
+</tr>
+</table>
+<br/>
+</form>

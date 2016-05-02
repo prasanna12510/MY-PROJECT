@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo 1 - Zoom Slider</title>
+    <script src="zoomSlider.js" type="text/javascript"></script>
+    <link href="themes/1/zoomslider.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        body {background:#EEE;padding-top:50px;font:normal 12px Arial;}
+        .nav {width:840px; margin:0 auto;margin-top:-10px;}
+        .nav a {color:#0066FF;}
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="zoom-slider">
+            <img src="images/js-slideshow-0.jpg" alt="The Most Popular Javascript Slideshow" />
+            <img src="images/js-slideshow-1.jpg" alt="#htmlcaption1" />
+            <a href="http://www.menucool.com">
+                <img src="images/js-slideshow-2.jpg" alt="Breathe Life into Your Work" /></a>
+            <img src="images/js-slideshow-3.jpg" alt="#htmlcaption2" />
+        </div>
+        <!--The following are custom navigation buttons-->
+        <div style="width:840px;background:black;padding: 4px 8px 8px 12px; border-radius:0 0 6px 6px; text-align:right;">
+            <div style="float:left;">
+                <a onclick="zoomSlider.previous()" class="navPrev"></a>
+                <a id='auto' onclick="switchAutoAdvance()"></a>
+                <a onclick="zoomSlider.next()" class="navNext"></a>
+            </div>
+            <span id="thumbs">
+                <span><img src="images/thumb-0.jpg" /></span>
+                <span><img src="images/thumb-1.jpg" /></span>
+                <span><img src="images/thumb-2.jpg" /></span>
+                <span><img src="images/thumb-3.jpg" /></span>
+            </span>
+        </div>
+        <!--The following are HTML captions-->
+        <div id="htmlcaption1" style="display: none;">
+            <span style="color:#09F;font-size:20px;">Pure Javascript.</span> No jQuery. No Flash.
+        </div> 
+        <div id="htmlcaption2" style="display: none;">
+            <strong style="color:#C90;">HTML</strong> Captions. Integrated Thumbnails.
+        </div> 
+    </div>
+    <br />
+    <br />
+    <br />
+    <p class="nav">Demos: &nbsp;  &nbsp; 1 &nbsp; <a href="demo2.html">2</a></p>
+    <script type="text/javascript">
+        //The following script is for custom navigation buttons.
+        function switchAutoAdvance() {
+            zoomSlider.switchAuto();
+            switchPlayPauseClass();
+        }
+        function switchPlayPauseClass() {
+            var auto = document.getElementById('auto');
+            if (auto) {
+                var isAutoPlay = zoomSlider.getAuto();
+                auto.className = isAutoPlay ? "navPause" : "navPlay";
+                auto.title = isAutoPlay ? "Pause" : "Play";
+            }
+        }
+        switchPlayPauseClass();
+
+
+        //Change the captionEffect. It is recommended to set { captionEffect: "fade" } directly through the zoomSliderOptions in the javascript file instead of using the approach below
+        zoomSlider.changeOptions({ captionEffect: "fade" });
+
+    </script>
+</body>
+</html>

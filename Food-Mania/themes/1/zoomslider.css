@@ -1,0 +1,100 @@
+/* http://www.menucool.com */
+
+#wrapper 
+{
+    position:relative;width:840px;margin:0 auto;
+}
+
+#zoom-slider {
+    width:840px;height:420px;/* Make it smaller than your images for zooming effect */
+    border:10px solid black;
+	background:#CCC url(loading.gif) no-repeat 50% 50%;
+    overflow:hidden;
+	position:relative;
+	margin:0 auto;/*make the image slider center-aligned */
+    border-radius:6px 6px 0 0;
+}
+
+#zoom-slider img {
+	position:absolute;
+	display:none;
+	top:0px;
+	z-index:1;
+	-ms-interpolation-mode: bicubic;
+	image-rendering: optimizeQuality;
+}
+
+/* Caption styles */
+div.zs-caption-bg, div.zs-caption-bg2 {
+	position:absolute;
+	left:120px;/*if the caption needs to be aligned from right, specify by right instead of left. i.e. right:20px;*/
+	bottom:10px;/*if the caption needs to be aligned from top, specify by top instead of bottom. i.e. top:350px;*/
+	width:360px;
+	height:auto;
+	padding:10px;
+	z-index:6;
+	overflow:hidden;
+	font-size:0;
+}
+div.zs-caption-bg {
+	background:transparent;	/*Caption background color. Can be defined as semi-transparent through the javascript slideshowOptions setting.*/
+	border:none;/*border-radius: 5px;border:1px solid #CCCCCC;*/
+}
+div.zs-caption {
+	font:normal 15px/16px Arial;
+	color:#CCC;
+	z-index:7;
+	text-align:left;/* When captionEffect was set to rotate through javascript, and setting "text-align:left" will create a fly-in effect, and setting "text-align:center" will get the rotate effect. */
+	overflow:hidden;
+}
+div.zs-caption a {
+	color:#09F;
+}
+
+
+/* navigation bullets wrapper */
+div.navBulletsWrapper  {
+	display:none;
+}
+
+
+/*-----------navigation buttons----------------*/
+a.navPrev, a.navPlay, a.navPause, a.navNext 
+{
+    width:17px; height:17px; 
+    background:transparent url(navbuttons.gif); 
+    display:inline-block;
+    margin:10px 0;
+    cursor:pointer;
+}
+a.navPause {background-position:0 0;}
+a.navPlay {background-position:0 -17px;}
+a.navNext {background-position:0 -34px;}
+a.navPrev {background-position:0 -51px;} 
+
+a.navPause:hover {background-position:17px 0;}
+a.navPlay:hover {background-position:17px -17px;}
+a.navNext:hover {background-position:17px -34px;}
+a.navPrev:hover {background-position:17px -51px;} 
+
+a.navPrev, a.navPlay, a.navPause, a.navNext 
+{
+   user-select: none;
+}
+
+
+/*thumbnails*/
+#thumbs {width:840px;}
+#thumbs span {background:Black;display:inline-block;margin-right:3px;font-size:0;}
+#thumbs img {border:1px solid #999; cursor:pointer;}
+
+
+/* --------- Others ------- */
+#zoom-slider img
+{
+	transform: translate3d(0,0,0);
+    -ms-transform:translate3d(0,0,0);
+    -moz-transform:translate3d(0,0,0);
+    -o-transform:translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}
