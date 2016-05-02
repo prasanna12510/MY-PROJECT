@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>Thanks and Other Resources</title>
+</head>
+
+<body>
+<h1>Thanks</h1>
+<p>Disk Less Android Device</p>
+<table>
+  <tr><td>Prasanna Pawar</td><td></td></tr>
+  <tr><td>Manish Ghumnani</td><td></td></tr>
+  <tr><td>Abhijeet Daga</td><td></td></tr>
+  
+</table>
+<h1>Other Resources</h1>
+<p><a href="http://fuse.sourceforge.net/" >FUSE Filesystem home
+page</a></p>
+<p><a href="http://www.ibm.com/developerworks/linux/library/l-fuse/"
+>Singh, Sumit, </em>Develop your own filesystem with FUSE</em> on IBM
+Developerworks</a></p>
+<p><a href="http://hub.opensolaris.org/bin/view/Project+fuse/Documentation" >Documentation of FUSE on OpenSolaris</a></p>
+<hr>
+<address></address>
+</body> </html>

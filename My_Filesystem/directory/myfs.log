@@ -1,0 +1,1224 @@
+
+my_init()
+    conn:
+    proto_major = 7
+    proto_minor = 23
+    async_read = 1
+    max_write = 131072
+    max_readahead = 131072
+    capable = 00000ffb
+    want = 00000010
+    max_background = 0
+    congestion_threshold = 0
+    context:
+    fuse = 0125e530
+    uid = 0
+    gid = 0
+    pid = 0
+    private_data = 0125d010
+    logfile = 0125e040
+    rootdir = /home/prasanna/pras/my_filesystem/directory/rootdir
+    umask = 00000
+
+my_opendir(path="/", fi=0x3d6ddc40)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/"
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_getattr(path="/.Trash", statbuf=0x3dedec50)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/.Trash", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/.Trash"
+    ERROR my_getattr lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+my_getattr(path="/.xdg-volume-info", statbuf=0x3d6ddc50)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/.xdg-volume-info", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/.xdg-volume-info"
+    ERROR my_getattr lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+my_getattr(path="/autorun.inf", statbuf=0x3dedec50)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/autorun.inf", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/autorun.inf"
+    ERROR my_getattr lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+my_readdir(path="/", buf=0x30000990, filler=0x3e6d0460, offset=0, fi=0x3d6ddc40)
+calling filler with name bogus.txt
+calling filler with name .
+calling filler with name bogus.txt~
+calling filler with name ..
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_getattr(path="/.Trash-1000", statbuf=0x3d6ddc50)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/.Trash-1000", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/.Trash-1000"
+    ERROR my_getattr lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+my_getattr(path="/bogus.txt", statbuf=0x3dedec50)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/bogus.txt", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/bogus.txt"
+    si:
+    st_dev = 2059
+    st_ino = 441124
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 36
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x55163d74
+    st_mtime = 0x55163d74
+    st_ctime = 0x55163d74
+
+my_getattr(path="/bogus.txt~", statbuf=0x3d6ddc50)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/bogus.txt~", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/bogus.txt~"
+    si:
+    st_dev = 2059
+    st_ino = 428702
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 36
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x55163d73
+    st_mtime = 0x55163d73
+    st_ctime = 0x55163d74
+
+my_releasedir(path="/", fi=0x3d6ddc50)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_opendir(path="/", fi=0x3d6ddc40)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/"
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_readdir(path="/", buf=0x30000990, filler=0x3e6d0460, offset=0, fi=0x3dedec40)
+calling filler with name bogus.txt
+calling filler with name .
+calling filler with name bogus.txt~
+calling filler with name ..
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_releasedir(path="/", fi=0x3d6ddc50)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_opendir(path="/", fi=0x3d6ddc40)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/"
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_readdir(path="/", buf=0x30000990, filler=0x3e6d0460, offset=0, fi=0x3dedec40)
+calling filler with name bogus.txt
+calling filler with name .
+calling filler with name bogus.txt~
+calling filler with name ..
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_releasedir(path="/", fi=0x3d6ddc50)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_opendir(path="/", fi=0x3d6ddc40)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/"
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_readdir(path="/", buf=0x30000990, filler=0x3e6d0460, offset=0, fi=0x3dedec40)
+calling filler with name bogus.txt
+calling filler with name .
+calling filler with name bogus.txt~
+calling filler with name ..
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_releasedir(path="/", fi=0x3d6ddc50)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_opendir(path="/", fi=0x3d6ddc40)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/"
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_readdir(path="/", buf=0x30000990, filler=0x3e6d0460, offset=0, fi=0x3dedec40)
+calling filler with name bogus.txt
+calling filler with name .
+calling filler with name bogus.txt~
+calling filler with name ..
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_releasedir(path="/", fi=0x3d6ddc50)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_opendir(path="/", fi=0x3d6ddc40)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/"
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_readdir(path="/", buf=0x30000990, filler=0x3e6d0460, offset=0, fi=0x3dedec40)
+calling filler with name bogus.txt
+calling filler with name .
+calling filler with name bogus.txt~
+calling filler with name ..
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_releasedir(path="/", fi=0x3d6ddc50)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_opendir(path="/", fi=0x3d6ddc40)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/"
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_readdir(path="/", buf=0x30000990, filler=0x3e6d0460, offset=0, fi=0x3dedec40)
+calling filler with name bogus.txt
+calling filler with name .
+calling filler with name bogus.txt~
+calling filler with name ..
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_releasedir(path="/", fi=0x3d6ddc50)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_opendir(path="/", fi=0x3d6ddc40)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/"
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_readdir(path="/", buf=0x30000990, filler=0x3e6d0460, offset=0, fi=0x3dedec40)
+calling filler with name bogus.txt
+calling filler with name .
+calling filler with name bogus.txt~
+calling filler with name ..
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_releasedir(path="/", fi=0x3d6ddc50)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_opendir(path="/", fi=0x3d6ddc40)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/"
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_readdir(path="/", buf=0x30000990, filler=0x3e6d0460, offset=0, fi=0x3dedec40)
+calling filler with name bogus.txt
+calling filler with name .
+calling filler with name bogus.txt~
+calling filler with name ..
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_releasedir(path="/", fi=0x3d6ddc50)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_opendir(path="/", fi=0x3d6ddc40)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/"
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_readdir(path="/", buf=0x30000990, filler=0x3e6d0460, offset=0, fi=0x3dedec40)
+calling filler with name bogus.txt
+calling filler with name .
+calling filler with name bogus.txt~
+calling filler with name ..
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_releasedir(path="/", fi=0x3d6ddc50)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_opendir(path="/", fi=0x3d6ddc40)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/"
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_readdir(path="/", buf=0x30000990, filler=0x3e6d0460, offset=0, fi=0x3dedec40)
+calling filler with name bogus.txt
+calling filler with name .
+calling filler with name bogus.txt~
+calling filler with name ..
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_releasedir(path="/", fi=0x3d6ddc50)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_opendir(path="/", fi=0x3d6ddc40)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/"
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_readdir(path="/", buf=0x30000990, filler=0x3e6d0460, offset=0, fi=0x3dedec40)
+calling filler with name bogus.txt
+calling filler with name .
+calling filler with name bogus.txt~
+calling filler with name ..
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_releasedir(path="/", fi=0x3d6ddc50)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_opendir(path="/", fi=0x3d6ddc40)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/"
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_readdir(path="/", buf=0x30000990, filler=0x3e6d0460, offset=0, fi=0x3dedec40)
+calling filler with name bogus.txt
+calling filler with name .
+calling filler with name bogus.txt~
+calling filler with name ..
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_releasedir(path="/", fi=0x3d6ddc50)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_opendir(path="/", fi=0x3d6ddc40)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/"
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_readdir(path="/", buf=0x30000990, filler=0x3e6d0460, offset=0, fi=0x3dedec40)
+calling filler with name bogus.txt
+calling filler with name .
+calling filler with name bogus.txt~
+calling filler with name ..
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_releasedir(path="/", fi=0x3d6ddc50)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_opendir(path="/", fi=0x3d6ddc40)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/"
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_readdir(path="/", buf=0x30000990, filler=0x3e6d0460, offset=0, fi=0x3dedec40)
+calling filler with name bogus.txt
+calling filler with name .
+calling filler with name bogus.txt~
+calling filler with name ..
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_releasedir(path="/", fi=0x3d6ddc50)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_opendir(path="/", fi=0x3d6ddc40)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/"
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_readdir(path="/", buf=0x30000990, filler=0x3e6d0460, offset=0, fi=0x3dedec40)
+calling filler with name bogus.txt
+calling filler with name .
+calling filler with name bogus.txt~
+calling filler with name ..
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_releasedir(path="/", fi=0x3d6ddc50)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_opendir(path="/", fi=0x3d6ddc40)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/"
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_readdir(path="/", buf=0x30000990, filler=0x3e6d0460, offset=0, fi=0x3dedec40)
+calling filler with name bogus.txt
+calling filler with name .
+calling filler with name bogus.txt~
+calling filler with name ..
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_releasedir(path="/", fi=0x3d6ddc50)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_opendir(path="/", fi=0x3d6ddc40)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/"
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_readdir(path="/", buf=0x30000990, filler=0x3e6d0460, offset=0, fi=0x3dedec40)
+calling filler with name bogus.txt
+calling filler with name .
+calling filler with name bogus.txt~
+calling filler with name ..
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_releasedir(path="/", fi=0x3d6ddc50)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_opendir(path="/", fi=0x3d6ddc40)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/"
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_readdir(path="/", buf=0x30000990, filler=0x3e6d0460, offset=0, fi=0x3dedec40)
+calling filler with name bogus.txt
+calling filler with name .
+calling filler with name bogus.txt~
+calling filler with name ..
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_releasedir(path="/", fi=0x3d6ddc50)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_opendir(path="/", fi=0x3d6ddc40)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/"
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_readdir(path="/", buf=0x30000990, filler=0x3e6d0460, offset=0, fi=0x3dedec40)
+calling filler with name bogus.txt
+calling filler with name .
+calling filler with name bogus.txt~
+calling filler with name ..
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_releasedir(path="/", fi=0x3d6ddc50)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_opendir(path="/", fi=0x3d6ddc40)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/"
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_readdir(path="/", buf=0x30000990, filler=0x3e6d0460, offset=0, fi=0x3dedec40)
+calling filler with name bogus.txt
+calling filler with name .
+calling filler with name bogus.txt~
+calling filler with name ..
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_releasedir(path="/", fi=0x3d6ddc50)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630000b20
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630000b20
+    lock_owner = 0x0000000000000000
+
+my_opendir(path="/", fi=0x3dedec40)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/"
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2638000da0
+    lock_owner = 0x0000000000000000
+
+my_readdir(path="/", buf=0x38000c10, filler=0x3e6d0460, offset=0, fi=0x3d6ddc40)
+calling filler with name bogus.txt
+calling filler with name .
+calling filler with name bogus.txt~
+calling filler with name ..
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2638000da0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2638000da0
+    lock_owner = 0x0000000000000000
+
+my_releasedir(path="/", fi=0x3dedec50)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2638000da0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2638000da0
+    lock_owner = 0x0000000000000000
+
+my_getattr(path="/autorun.inf", statbuf=0x3d6ddc50)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/autorun.inf", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/autorun.inf"
+    ERROR my_getattr lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+my_getattr(path="/", statbuf=0x3dedec20)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/"
+    si:
+    st_dev = 2059
+    st_ino = 518847
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x55163d96
+    st_mtime = 0x55163d74
+    st_ctime = 0x55163d74
+
+my_opendir(path="/", fi=0x3d6ddc40)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/"
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630001170
+    lock_owner = 0x0000000000000000
+
+my_access(path="/", mask=02)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/"
+
+my_getattr(path="/.Trash", statbuf=0x3dedec50)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/.Trash", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/.Trash"
+    ERROR my_getattr lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+my_getattr(path="/.Trash-1000", statbuf=0x3d6ddc50)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/.Trash-1000", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/.Trash-1000"
+    ERROR my_getattr lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+my_access(path="/", mask=02)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/"
+
+my_readdir(path="/", buf=0x30000a20, filler=0x3e6d0460, offset=0, fi=0x3dedec40)
+calling filler with name bogus.txt
+calling filler with name .
+calling filler with name bogus.txt~
+calling filler with name ..
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630001170
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630001170
+    lock_owner = 0x0000000000000000
+
+my_getattr(path="/bogus.txt", statbuf=0x3cedcc50)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/bogus.txt", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/bogus.txt"
+    si:
+    st_dev = 2059
+    st_ino = 441124
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 36
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x55163d74
+    st_mtime = 0x55163d74
+    st_ctime = 0x55163d74
+
+my_getattr(path="/.hidden", statbuf=0x3dedec50)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/.hidden", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/.hidden"
+    ERROR my_getattr lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+my_access(path="/bogus.txt", mask=04)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/bogus.txt", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/bogus.txt"
+
+my_access(path="/bogus.txt", mask=02)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/bogus.txt", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/bogus.txt"
+
+my_access(path="/bogus.txt", mask=01)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/bogus.txt", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/bogus.txt"
+    ERROR my_access access: Permission denied
+
+my_getattr(path="/", statbuf=0x3d6ddc20)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/"
+    si:
+    st_dev = 2059
+    st_ino = 518847
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x55163d96
+    st_mtime = 0x55163d74
+    st_ctime = 0x55163d74
+
+my_getattr(path="/bogus.txt~", statbuf=0x3cedcc50)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/bogus.txt~", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/bogus.txt~"
+    si:
+    st_dev = 2059
+    st_ino = 428702
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 36
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x55163d73
+    st_mtime = 0x55163d73
+    st_ctime = 0x55163d74
+
+my_access(path="/bogus.txt~", mask=04)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/bogus.txt~", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/bogus.txt~"
+
+my_access(path="/bogus.txt~", mask=02)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/bogus.txt~", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/bogus.txt~"
+
+my_access(path="/bogus.txt~", mask=01)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/bogus.txt~", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/bogus.txt~"
+    ERROR my_access access: Permission denied
+
+my_releasedir(path="/", fi=0x3d6ddc50)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7f2630001170
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f2630001170
+    lock_owner = 0x0000000000000000
+
+my_open(path"/bogus.txt", fi=0x3cedcd00)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/bogus.txt", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/bogus.txt"
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+my_read(path="/bogus.txt", buf=0x38000d70, size=4096, offset=0, fi=0x3deded00)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+my_getattr(path="/bogus.txt", statbuf=0x3d6ddc20)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/bogus.txt", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/bogus.txt"
+    si:
+    st_dev = 2059
+    st_ino = 441124
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 36
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x55163d74
+    st_mtime = 0x55163d74
+    st_ctime = 0x55163d74
+
+my_flush(path="/bogus.txt", fi=0x3cedcd00)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x54d18721cf6ed38f
+
+my_release(path="/bogus.txt", fi=0x3deded00)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+my_getattr(path="/", statbuf=0x3d6ddc20)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/"
+    si:
+    st_dev = 2059
+    st_ino = 518847
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x55163d96
+    st_mtime = 0x55163d74
+    st_ctime = 0x55163d74
+
+my_statfs(path="/", statv=0x3cedcc00)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/"
+    sv:
+    f_bsize = 4096
+    f_frsize = 4096
+    f_blocks = 4635837
+    f_bfree = 388261
+    f_bavail = 147007
+    f_files = 1187840
+    f_ffree = 778713
+    f_favail = 778713
+    f_fsid = -6252889881836527631
+    f_flag = 0x00001000
+    f_namemax = 255
+
+my_getattr(path="/bogus.txt", statbuf=0x3dedec50)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/bogus.txt", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/bogus.txt"
+    si:
+    st_dev = 2059
+    st_ino = 441124
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 36
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x55163d74
+    st_mtime = 0x55163d74
+    st_ctime = 0x55163d74
+
+my_getattr(path="/bogus.txt", statbuf=0x3d6ddc50)
+    my_fullpath:  rootdir = "/home/prasanna/pras/my_filesystem/directory/rootdir", path = "/bogus.txt", fpath = "/home/prasanna/pras/my_filesystem/directory/rootdir/bogus.txt"
+    si:
+    st_dev = 2059
+    st_ino = 441124
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 36
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x55163d74
+    st_mtime = 0x55163d74
+    st_ctime = 0x55163d74
+
+my_destroy(userdata=0x0125d010)
