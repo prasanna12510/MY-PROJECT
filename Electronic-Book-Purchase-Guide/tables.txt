@@ -1,0 +1,9 @@
+Project Tables
+
+login( userid  userpass  usertype)
+create table login
+(
+ userid varchar(15) primary key,
+ userpass varchar(15) not null,
+ usertype varchar(15) not null
+);

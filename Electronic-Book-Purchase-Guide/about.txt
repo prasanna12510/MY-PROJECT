@@ -1,0 +1,16 @@
+new std exe --> open
+Project -> Add Module -> Module Name --> module_main
+
+define a procedure
+  "public sub main"
+.. as in code
+
+Project --> Add --> Reference --> Microsoft ADO Library 6.0 -->OK
+
+Project --> Add Form --> Form Name -> FrmConnectionErr
+
+project --> properties --> startup object
+
+
+
+

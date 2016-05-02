@@ -1,0 +1,13 @@
+Connecting with Oracle using VB 6.0 on WIN 7
+
+Create a DSN (Data Source Name) 
+Control Panel -> Admin Tools ->ODBC
+System DSN -> Add 
+Driver : Oracle in XE
+DSN NAME : prjDSN <any name>
+Service : XE
+UserName : vb <any name>
+Test Connection
+Password : project <valid password>
+OK
+OK

@@ -1,0 +1,15 @@
+Create a new oracle database user
+--------------------------------
+Oracle 10 G 
+Go to Database Home Page
+Admin Login  (system/manager)
+Database Users
+Create
+UserName : vb <anything else>
+Password : project <anything else>
+
+Roles : SELECT ALL
+Privilages : SELECT ALL
+Create
+
+  

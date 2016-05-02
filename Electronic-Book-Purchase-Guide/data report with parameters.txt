@@ -1,0 +1,17 @@
+prj -> add data envi
+right click on conn1 ->properties -> Jet 4.0 -> select datasource -> test connection -> OK
+right click on conn1 -> add command
+right click on command1 -> properties -> sql statement -> copy the sql as in code->OK
+right click on command1 -> properties -> parameter tab -> specify parameter name, type, ... as in code ->OK
+
+prj-> add data report
+data report ->properties -> data src = data env1 and data field = command1
+data report -> right click and retrieve structure
+drag and drop fields from command1 to data report 1
+arrange them across header and detail sections 
+form the report interface as shown
+
+
+
+
+
