@@ -1,0 +1,40 @@
+Video Library System
+
+Users
+  uid
+  upass
+  utype
+  
+Media
+  mid
+  mtype
+
+Movie
+  mvid          
+  mvname     
+  mvyear
+  mvtype
+  mvLanguage
+
+Actor
+  aid
+  aname
+
+MovieActor
+   maid		
+   mvid		
+   aid	
+
+Client
+   cid
+   cname
+   caddress
+   cphone
+   
+Membership
+  memid
+  memtype
+  memdeposit
+  memMaxIssueCount
+   		
+      

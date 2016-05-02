@@ -1,0 +1,6 @@
+Line 30: Class MSHierarchicalFlexGridLib.MSHFlexGrid of control MSHFlexGrid1 was not a loaded control class.
+Line 36: The property name _ExtentX in MSHFlexGrid1 is invalid.
+Line 37: The property name _ExtentY in MSHFlexGrid1 is invalid.
+Line 38: The property name _Version in MSHFlexGrid1 is invalid.
+Line 39: The property name _NumberOfBands in MSHFlexGrid1 is invalid.
+Line 40: The property name _Band(0).Cols in MSHFlexGrid1 is invalid.
