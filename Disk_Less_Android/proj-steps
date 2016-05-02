@@ -1,0 +1,91 @@
+1.download and install jdk and sdk
+
+terminal-
+sudo apt-get update (get latest ubuntu repository)
+
+2.download the kernel source:-
+first install git (if not already installed) using-sudo apt-get install git
+git clone https://android.googlesource.com/kernel/goldfish.git
+cd goldfish
+git checkout -t origin/android-goldfish-3.4 -b goldfish3.4
+
+3.changes made to bash:-
+export JAVA_HOME=/usr/java/jdk1.7.0_65/bin/java
+export PATH=${PATH}:/usr/java/jdk1.7.0_65/bin
+export PATH=${PATH}:/home/manish/ADT/sdk/platform-tools
+export PATH=${PATH}:/home/manish/ADT/sdk/tools
+
+4.to run install and run adb and emulator from terminal:-
+sudo apt-get install libstdc++6:i386 libgcc1:i386 zlib1g:i386 libncurses5:i386
+sudo apt-get install libsdl1.2debian:i386
+sudo apt-get install lib32z1
+
+
+5.to link libGL.so:-
+ln -s /usr/lib/libGL.so.1 ~/ADT/sdk/tools/lib/libGL.so
+ln -s /usr/lib/libGL.so.2 ~/ADT/sdk/tools/lib/libGL.so
+sudo apt-get install libgl1-mesa-dev
+
+6.building the kernel:-
+a. install portmap and nfs-kernel-server:- sudo apt-get install nfs-kernel-server portmap(rpcbind)
+b. to start/restart nfs server:- sudo /etc/init.d/nfs-kernel-server start/restart
+c. configure sharing folders in exports:-
+   sudo gedit /etc/exports   
+   /tmp/nfs 10.0.2.15/255.255.255.0(rw,sync,no_root_squash,insecure)  
+   /tmp/nfs 127.0.0.1(rw,sync,no_root_squash,insecure)  
+d. install ncurses:- sudo apt-get install libncurses5-dev 
+e. make ARCH=arm menuconfig goldfish_defconfig
+   modification:- The target "goldfish_defconfig" configures the kernel for an ARM 926 but the now the emulator is configured to run on cortex A8
+   which is a armv7 architecture. So use "goldfish_armv7_defconfig" instead.
+f. to install prebuilt gcc:- git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.6
+g. build:- make ARCH=arm CROSS_COMPILE=arm-eabi-4.6/bin/arm-eabi-   (cross compile toolchain)
+
+ emulator -debug init -kernel /home/manish/goldfish/arch/arm/boot/zImage -system /home/manish/ADT/sdk/system-images/android-L/default/armeabi-v7a/system.img -ramdisk /home/manish/ADT/sdk/system-images/android-L/default/armeabi-v7a/ramdisk.img -avd nx -wipe-data
+
+
+emulator -debug init -kernel /home/manish/goldfish/arch/arm/boot/zImage -system /out/target/product/generic/system.img -ramdisk /out/target/product/generic/ramdisk.img -avd firstAvd -wipe-data
+
+adb push /home/manish/busybox /data
+adb shell
+/data/busybox mount -t nfs -0 nfsvers=3,nolock 10.0.2.2:/tmp/nfs /data/nfs
+
+mount -o remount,rw /
+ chmod 755 ./busybox 
+(
+
+    adb shell mkdir /data/busybox
+    adb push busybox /data/busybox
+    adb shell
+    su
+    cd /data/busybox
+    chmod 775 busybox
+    ./busybox --install
+    busybox
+
+)
+
+mounting:-          
+[9:18:09 PM] prasanna pawar added abhijeetdaga3006 ashish.bijlani live:manish_ghumnani.
+[9:22:25 PM] Ashish Bijlani: rootfs over NFS
+[9:23:41 PM] Ashish Bijlani: change the kernel command line
+[9:23:57 PM] Ashish Bijlani: -kernel <path to kernel>
+[9:24:45 PM] Ashish Bijlani: -qemu -append “nfs=192.168.1.23:/tmp/nfs/ root=/dev/nfs”
+[9:25:20 PM] Ashish Bijlani: get L-version system.img and data.img
+[9:25:30 PM] Ashish Bijlani: sdk
+[9:25:44 PM] Ashish Bijlani: extract ramdisk.img to /tmp/nfs/
+[9:25:57 PM] Ashish Bijlani: extract system.img to /tmp/nfs/system
+[9:26:09 PM] Ashish Bijlani: extract userdata.img /tmp/nfs/data
+[9:26:33 PM] Ashish Bijlani: -qemu -append “nfs=192.168.1.23:/tmp/nfs/ root=/dev/nfs”
+[9:27:31 PM] Ashish Bijlani: https://www.kernel.org/doc/Documentation/filesystems/nfs/nfsroot.txt
+[9:28:07 PM] Ashish Bijlani: http://developer.android.com/tools/help/emulator.html
+[9:28:18 PM] Ashish Bijlani: search for “qemu”
+[9:29:16 PM] Ashish Bijlani: adb shell
+[9:29:20 PM] Ashish Bijlani: mount
+[9:29:25 PM] Ashish Bijlani: //data
+[9:29:59 PM] Ashish Bijlani: system -> apps
+[9:30:05 PM] Ashish Bijlani: system/bin -> apps
+[9:30:13 PM] Ashish Bijlani: system/lib -> libs
+[9:30:28 PM] Ashish Bijlani: cache
+[9:31:03 PM] Ashish Bijlani: / , system, data -> remote
+
+
