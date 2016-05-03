@@ -1,0 +1,58 @@
+body {
+  background-image: url(bg.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+p {
+  margin: 0;
+}
+h1 {
+  font-family: "Arial Black", sans-serif;
+  margin-bottom: 4rem;
+  color: blue;
+}
+
+footer {
+  color: white;
+}
+
+footer a, footer a:hover, footer a:active, footer a:visited {
+  color: navajowhite;
+}
+
+.custom-button {
+  width: 100%;
+  margin-bottom: 1.3rem;
+  width: 58%;
+  padding: 1.8rem 0;
+  font-size: 1.8rem;
+}
+
+.opacityLevel {
+  opacity: 0.8;
+}
+
+.quoteHistoryBox{
+  margin-top: 2.5rem;
+  background-color: gray;
+  color: navajowhite;
+}
+
+.quoteHistory p {
+  margin: 1.5rem 0;
+  color: white;
+}
+
+#quote {
+  font-size: 20px;
+}
+
+#author {
+  color: darkgoldenrod;
+}

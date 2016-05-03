@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Quote Machine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+
+  <body>
+    <div class="container text-center">
+      <div class="row">
+      <h1 class="opacityLevel">Quote Machine</h1>
+        <div id="generate" class="btn btn-primary custom-button opacityLevel">
+          Generate Quote
+        </div>
+        
+        <div class="well opacityLevel">
+          <p id="quote" class="currentQuote">Click the button to generate a quote here.</p>
+          <p id="author" class="currentQuote text-right"></p>
+        </div>
+        <a href="https://twitter.com/intent/tweet?text=Check out this random quote generator!" id="tweet" class="btn btn-info opacityLevel">Tweet This Quote</a>
+           
+        <div class="well opacityLevel quoteHistoryBox">
+          <h4>Previously Generated Quotes</h4>
+          <div class="quoteHistory"></div>
+        </div>
+        
+        <footer>
+          <div>
+            <div class="col-sm-6">
+              Created by: <a href="#" target="_blank">Prasanna Pawar</a>
+            </div>
+          </div>
+        </footer>
+        
+      </div><!-- /row -->
+    </div><!-- /container -->
+    
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
