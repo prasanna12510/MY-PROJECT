@@ -31,7 +31,7 @@ $(document).ready(function () {
       text += "...";
     }
     tweetQuote = encodeURIComponent(text);
-    $tweet.attr("href", "https://twitter.com/intent/tweet?text=" + tweetQuote + " - http://wulkan.me");
+    $tweet.attr("href", "https://twitter.com/intent/tweet?text=" + tweetQuote + "...!");
   }
   
   
